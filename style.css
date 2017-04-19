@@ -1,0 +1,296 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* ==========================================================================
+   Base Styles: Opinionated Defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+	font-size: xx-large;
+	width:75%;
+}
+
+input[type='radio'], input[type='checkbox'] {
+	transform: scale(2);
+	margin-left: 25px;
+}
+
+input[type='radio'] {
+	margin-right: 15px;
+}
+
+body {
+	overflow: hidden;
+    overflow-y: auto;	
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Yorkville Robotics Custom Styles
+   ========================================================================== */
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	border-color:#ccc;
+}
+
+table td, table th {
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#ccc;
+	color:#333;
+	background-color:#fff;
+}
+
+table tr td {
+	background-color:#f0f0f0;
+}
+
+table tr.alt td {
+	background-color:#f9f9f9;
+}
+
+
+/* Allow table sorting */
+th.tg-sort-header::-moz-selection { background:transparent; }
+th.tg-sort-header::selection      { background:transparent; }
+th.tg-sort-header { cursor:pointer; }
+table th.tg-sort-header:after {  content:'';  float:right;  margin-top:7px;  border-width:0 4px 4px;  border-style:solid;  border-color:#404040 transparent;  visibility:hidden;  }
+table th.tg-sort-header:hover:after {  visibility:visible;  }
+table th.tg-sort-desc:after,table th.tg-sort-asc:after,table th.tg-sort-asc:hover:after {  visibility:visible;  opacity:0.4;  }
+table th.tg-sort-desc:after {  border-bottom:none;  border-width:4px 4px 0;  }
+@media screen and (max-width: 767px) {
+	#statsTable {width: auto !important;}
+	#statsTable col {width: auto !important;}
+	.table-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
+
+	
+#foximusButton, #otherButton, #lowGoal, #returnHome, #numGears, #climbTimer {
+	display:inline-block;
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 150px;
+    padding: 5px;
+    text-align: center;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; 
+}
+
+#foximusButton:hover, #otherButton:hover, #returnHome:hover, #numGears:hover, #climbTimer:hover {
+    color:red;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+#makeHigh, #missHigh {
+	display:inline-block;
+    color:#444;
+    border:1px solid #CCC;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    max-width: 300px;
+	min-width: 300px;
+	max-height:300px;
+	min-height:300px;
+	height:300px;
+	width:300px;
+    padding: 5px;
+}
+
+#makeHigh {
+	background: #0F0;
+	font-size:24px;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	-o-user-select: none;
+	user-select: none;
+}
+
+#missHigh {
+	background: #F00;
+	font-size:24px;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	-o-user-select: none;
+	user-select: none;
+}
+
+#makeHigh:active, #missHigh:active, #lowGoal:active {
+	background: #000;	
+}
+
+#otherButton {
+	padding: 50px;
+	width: 50%;
+	font-size:xx-large;
+}
+
+#teamSelect {
+	max-width: 50%;	
+}
+
+#recordStats {
+	max-width: 100%; !important;	
+}
+
+#climbTimer {
+	width: 175px;
+	max-width: 175px;	
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.centerImg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.centerTable {
+	margin-left:auto; 
+	margin-right:auto;	
+}
+
+.centerText {
+	text-align: center;	
+}
+
+.margin10 {
+	margin-left: 10px;	
+}
+
+.inline {
+	display: inline;	
+}
+
+/* ==========================================================================
+   Responsive Designs
+   ========================================================================== */
+
+// Tablet
+@media (max-width: 959px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+// Phone
+@media (max-width: 599px) { 
+    /* Style adjustments for high resolution devices */
+}
+
+// Responsive Tables
+@media screen and (max-width: 767px) 
+{
+	table {
+		width: auto !important;
+	}
+	
+	.tableWrap {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+}
