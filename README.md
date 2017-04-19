@@ -1,5 +1,5 @@
 # FIRST-Stat-Tracking
-Stat-tracking site for the 2017 FIRST Robotics compeititon.
+Stat-tracking site for the 2017 FIRST Robotics competition.
 
 ```SQL
 --
